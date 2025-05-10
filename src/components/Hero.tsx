@@ -10,9 +10,7 @@ const Hero = () => {
       <div className="container mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 items-center z-10">
         <div className="space-y-6 md:space-y-8">
           <div className="flex flex-col gap-3 md:gap-4">
-            <h2 className="text-sm sm:text-base md:text-lg tracking-wider font-medium text-theme-orange animate-fade-in">
-              HI, I'M CHINTAKRINDI LAKSHMI
-            </h2>
+            <h2 className="text-sm sm:text-base md:text-lg tracking-wider font-medium text-theme-orange animate-fade-in">HI, I'M CHINTAKRINDI LAKSHMI Vivek</h2>
             <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold leading-tight animate-fade-in" style={{
             animationDelay: "0.2s"
           }}>
@@ -24,11 +22,7 @@ const Hero = () => {
             </h1>
           </div>
           
-          <p className="text-muted-foreground text-lg md:text-xl animate-fade-in" style={{
-          animationDelay: "0.4s"
-        }}>
-          Chintakrindi
-                      Lakshmi Vivek</p>
+          
           
           <div className="flex flex-wrap gap-4 pt-4 animate-fade-in" style={{
           animationDelay: "0.6s"
