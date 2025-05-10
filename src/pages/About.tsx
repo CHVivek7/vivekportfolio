@@ -133,7 +133,7 @@ Internship</h4>
                 
                 <div className="bg-theme-dark border border-theme-orange/10 rounded-lg p-6">
                   <div className="flex justify-between items-start mb-2">
-                    <h4 className="font-bold">Android Developer Intern</h4>
+                    <h4 className="font-bold">Developing and maintaining web applications using Java and React. Collaborating with cross-functional teams to deliver high-quality software solutions.</h4>
                     <span className="text-theme-orange text-sm">Jan 2024 - Mar 2024</span>
                   </div>
                   <p className="text-sm text-muted-foreground mb-2">Google For Developers</p>
