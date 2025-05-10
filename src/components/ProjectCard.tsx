@@ -1,8 +1,6 @@
-
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { cn } from "@/lib/utils";
-
 interface ProjectCardProps {
   title: string;
   description: string;
@@ -11,29 +9,21 @@ interface ProjectCardProps {
   link: string;
   className?: string;
 }
-
-export function ProjectCard({ 
-  title, 
-  description, 
-  image, 
-  technologies, 
-  link, 
-  className 
+export function ProjectCard({
+  title,
+  description,
+  image,
+  technologies,
+  link,
+  className
 }: ProjectCardProps) {
-  return (
-    <div className={cn(
-      "group overflow-hidden rounded-lg border border-theme-orange/10 bg-theme-darker transition-all hover:border-theme-orange/30 hover:shadow-md hover:shadow-theme-orange/5",
-      className
-    )}>
+  return <div className={cn("group overflow-hidden rounded-lg border border-theme-orange/10 bg-theme-darker transition-all hover:border-theme-orange/30 hover:shadow-md hover:shadow-theme-orange/5", className)}>
       <div className="relative aspect-video overflow-hidden">
-        <div 
-          className="w-full h-full bg-gradient-to-br from-theme-orange/20 to-theme-dark/80"
-          style={{
-            backgroundImage: `url(${image})`,
-            backgroundSize: 'cover',
-            backgroundPosition: 'center'
-          }}
-        ></div>
+        <div className="w-full h-full bg-gradient-to-br from-theme-orange/20 to-theme-dark/80" style={{
+        backgroundImage: `url(${image})`,
+        backgroundSize: 'cover',
+        backgroundPosition: 'center'
+      }}></div>
         <div className="absolute inset-0 bg-gradient-to-t from-theme-darker to-transparent"></div>
       </div>
       
@@ -47,19 +37,15 @@ export function ProjectCard({
         </p>
         
         <div className="mb-4 flex flex-wrap gap-2">
-          {technologies.map((tech, index) => (
-            <span key={index} className="bg-theme-orange/10 text-theme-orange px-2 py-0.5 rounded text-xs">
+          {technologies.map((tech, index) => <span key={index} className="bg-theme-orange/10 text-theme-orange px-2 py-0.5 rounded text-xs">
               {tech}
-            </span>
-          ))}
+            </span>)}
         </div>
         
         <Button asChild variant="outline" className="w-full border-theme-orange text-theme-orange hover:bg-theme-orange/10">
-          <Link to={link}>View Project</Link>
+          
         </Button>
       </div>
-    </div>
-  );
+    </div>;
 }
-
 export default ProjectCard;
