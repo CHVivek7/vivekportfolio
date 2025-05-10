@@ -1,11 +1,8 @@
-
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
-
 const Hero = () => {
-  return (
-    <section className="min-h-screen flex flex-col justify-center relative overflow-hidden pt-20 pb-10 px-4 md:px-0">
+  return <section className="min-h-screen flex flex-col justify-center relative overflow-hidden pt-20 pb-10 px-4 md:px-0">
       {/* Background Elements */}
       <div className="absolute -top-20 -right-20 w-64 h-64 bg-theme-orange/10 rounded-full blur-3xl z-0"></div>
       <div className="absolute bottom-0 left-0 w-96 h-96 bg-theme-orange/5 rounded-full blur-3xl z-0"></div>
@@ -16,8 +13,10 @@ const Hero = () => {
             <h2 className="text-sm sm:text-base md:text-lg tracking-wider font-medium text-theme-orange animate-fade-in">
               HI, I'M CHINTAKRINDI LAKSHMI
             </h2>
-            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold leading-tight animate-fade-in" style={{ animationDelay: "0.2s" }}>
-              <span className="block">VIVEK</span>
+            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold leading-tight animate-fade-in" style={{
+            animationDelay: "0.2s"
+          }}>
+              
               <span className="block">
                 <span className="text-theme-orange">JAVA</span> FULL STACK
               </span>
@@ -25,11 +24,15 @@ const Hero = () => {
             </h1>
           </div>
           
-          <p className="text-muted-foreground text-lg md:text-xl animate-fade-in" style={{ animationDelay: "0.4s" }}>
+          <p className="text-muted-foreground text-lg md:text-xl animate-fade-in" style={{
+          animationDelay: "0.4s"
+        }}>
             Building Scalable Applications with Java & Full Stack Expertise
           </p>
           
-          <div className="flex flex-wrap gap-4 pt-4 animate-fade-in" style={{ animationDelay: "0.6s" }}>
+          <div className="flex flex-wrap gap-4 pt-4 animate-fade-in" style={{
+          animationDelay: "0.6s"
+        }}>
             <Button asChild size="lg" className="bg-theme-orange hover:bg-theme-orange/90 text-white">
               <Link to="/portfolio">
                 View My Work
@@ -61,8 +64,6 @@ const Hero = () => {
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default Hero;
