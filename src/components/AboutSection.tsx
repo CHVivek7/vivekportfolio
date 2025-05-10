@@ -1,5 +1,6 @@
 
 import { Button } from "@/components/ui/button";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 
 const AboutSection = () => {
   const handleNavClick = (path: string) => {
@@ -29,11 +30,12 @@ const AboutSection = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
           {/* About Image */}
           <div className="relative">
-            <div className="w-full aspect-square max-w-md mx-auto bg-gradient-to-br from-theme-darker to-theme-dark rounded-lg border border-theme-orange/20 shadow-lg shadow-theme-orange/5 overflow-hidden">
-              {/* Replace with actual image when available */}
-              <div className="w-full h-full bg-gradient-to-br from-theme-orange/20 to-theme-orange/5 flex items-center justify-center">
-                <span className="text-theme-orange text-4xl font-bold">V</span>
-              </div>
+            <div className="w-full aspect-square max-w-md mx-auto rounded-lg border border-theme-orange/20 shadow-lg shadow-theme-orange/5 overflow-hidden">
+              <img 
+                src="https://i.postimg.cc/Kj8XqJBB/New-Profile-photo.png" 
+                alt="Vivek's Profile" 
+                className="w-full h-full object-cover"
+              />
             </div>
             
             {/* Decorative elements */}
@@ -53,27 +55,81 @@ const AboutSection = () => {
               </p>
             </div>
             
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-              <div>
-                <h5 className="text-lg font-semibold mb-2">Education</h5>
-                <ul className="space-y-2 text-muted-foreground">
-                  <li>BTech in Information Technology, 2022-2026</li>
-                  <li>Intermediate, 2020-2022</li>
-                  <li className="text-muted-foreground">CGPA: 8.9 (Till date)</li>
-                </ul>
-              </div>
+            <Tabs defaultValue="skills" className="w-full mt-6">
+              <TabsList className="grid w-full grid-cols-3">
+                <TabsTrigger value="skills">Technical Skills</TabsTrigger>
+                <TabsTrigger value="education">Education</TabsTrigger>
+                <TabsTrigger value="internships">Internships</TabsTrigger>
+              </TabsList>
               
-              <div>
-                <h5 className="text-lg font-semibold mb-2">Technical Skills</h5>
+              <TabsContent value="skills" className="space-y-4 pt-4">
                 <div className="flex flex-wrap gap-2">
                   <span className="bg-theme-orange/10 text-theme-orange px-2 py-1 rounded text-sm">Java</span>
-                  <span className="bg-theme-orange/10 text-theme-orange px-2 py-1 rounded text-sm">React</span>
-                  <span className="bg-theme-orange/10 text-theme-orange px-2 py-1 rounded text-sm">MySQL</span>
+                  <span className="bg-theme-orange/10 text-theme-orange px-2 py-1 rounded text-sm">C</span>
+                  <span className="bg-theme-orange/10 text-theme-orange px-2 py-1 rounded text-sm">Python</span>
+                  <span className="bg-theme-orange/10 text-theme-orange px-2 py-1 rounded text-sm">SQL</span>
+                  <span className="bg-theme-orange/10 text-theme-orange px-2 py-1 rounded text-sm">HTML</span>
+                  <span className="bg-theme-orange/10 text-theme-orange px-2 py-1 rounded text-sm">CSS</span>
                   <span className="bg-theme-orange/10 text-theme-orange px-2 py-1 rounded text-sm">JavaScript</span>
-                  <span className="bg-theme-orange/10 text-theme-orange px-2 py-1 rounded text-sm">HTML/CSS</span>
+                  <span className="bg-theme-orange/10 text-theme-orange px-2 py-1 rounded text-sm">JSP</span>
+                  <span className="bg-theme-orange/10 text-theme-orange px-2 py-1 rounded text-sm">Servlets</span>
+                  <span className="bg-theme-orange/10 text-theme-orange px-2 py-1 rounded text-sm">Java Beans</span>
+                  <span className="bg-theme-orange/10 text-theme-orange px-2 py-1 rounded text-sm">JDBC</span>
+                  <span className="bg-theme-orange/10 text-theme-orange px-2 py-1 rounded text-sm">MySQL</span>
+                  <span className="bg-theme-orange/10 text-theme-orange px-2 py-1 rounded text-sm">Linux</span>
+                  <span className="bg-theme-orange/10 text-theme-orange px-2 py-1 rounded text-sm">Windows</span>
+                  <span className="bg-theme-orange/10 text-theme-orange px-2 py-1 rounded text-sm">Git</span>
                 </div>
-              </div>
-            </div>
+              </TabsContent>
+              
+              <TabsContent value="education" className="space-y-4 pt-4">
+                <div className="space-y-3">
+                  <div className="bg-theme-orange/5 p-3 rounded-lg">
+                    <h5 className="font-semibold">B.Tech in Information Technology</h5>
+                    <p className="text-sm text-muted-foreground">Vasireddy Venkatadri Institute of Technology</p>
+                    <p className="text-sm text-theme-orange">CGPA: 8.1 (Till date)</p>
+                  </div>
+                  
+                  <div className="bg-theme-orange/5 p-3 rounded-lg">
+                    <h5 className="font-semibold">Intermediate</h5>
+                    <p className="text-sm text-muted-foreground">Narayana Junior College</p>
+                    <p className="text-sm text-theme-orange">Percentage: 89%</p>
+                  </div>
+                  
+                  <div className="bg-theme-orange/5 p-3 rounded-lg">
+                    <h5 className="font-semibold">SSC</h5>
+                    <p className="text-sm text-muted-foreground">Sri Chaintanya Techno School</p>
+                    <p className="text-sm text-theme-orange">Percentage: 97.5%</p>
+                  </div>
+                </div>
+              </TabsContent>
+              
+              <TabsContent value="internships" className="space-y-4 pt-4">
+                <div className="space-y-4">
+                  <div className="bg-theme-orange/5 p-4 rounded-lg">
+                    <h5 className="font-semibold text-theme-orange">Java Full Stack Developer Intern</h5>
+                    <p className="text-sm font-medium mb-2">Edu Skills – Sep 2024 to Nov 2024</p>
+                    <ul className="list-disc pl-5 text-sm text-muted-foreground space-y-1">
+                      <li>Developed enterprise-level web applications using Java, JSP, and MySQL as part of a 10-week intensive program.</li>
+                      <li>Implemented responsive front-end interfaces with modern JavaScript practices and optimized database queries.</li>
+                      <li>Collaborated with senior developers to troubleshoot complex issues across the full stack.</li>
+                      <li>Received recognition for outstanding performance and innovative solutions.</li>
+                    </ul>
+                  </div>
+                  
+                  <div className="bg-theme-orange/5 p-4 rounded-lg">
+                    <h5 className="font-semibold text-theme-orange">Android Development Intern</h5>
+                    <p className="text-sm font-medium mb-2">Edu Skills – Jan 2024 to Mar 2024</p>
+                    <ul className="list-disc pl-5 text-sm text-muted-foreground space-y-1">
+                      <li>Participated in a prestigious Google for Developers-supported Android Virtual Internship program.</li>
+                      <li>Created and optimized UI components using Android Studio and Material Design principles.</li>
+                      <li>Implemented RESTful API integrations and local data persistence solutions.</li>
+                      <li>Achieved the highest performance rating for technical skills and project delivery.</li>
+                    </ul>
+                  </div>
+                </div>
+              </TabsContent>
+            </Tabs>
             
             <div className="pt-4">
               <Button 

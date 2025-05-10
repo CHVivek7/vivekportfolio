@@ -17,13 +17,6 @@ const PortfolioSection = () => {
       image: "/placeholder.svg",
       technologies: ["HTML", "CSS", "JavaScript", "Weather API", "Responsive Design"],
       link: "#portfolio/weather-app"
-    },
-    {
-      title: "E-commerce Platform",
-      description: "Fully-featured online store with product management, cart functionality, and secure checkout.",
-      image: "/placeholder.svg",
-      technologies: ["Java", "Spring Boot", "React", "MySQL", "REST API"],
-      link: "#portfolio/ecommerce"
     }
   ];
 
@@ -34,7 +27,7 @@ const PortfolioSection = () => {
       
       <div className="container mx-auto px-4 md:px-6 relative z-10">
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <h2 className="text-sm font-medium tracking-wider text-theme-orange mb-2">MY PORTFOLIO</h2>
+          <h2 className="text-sm font-medium tracking-wider text-theme-orange mb-2">MY PROJECTS</h2>
           <h3 className="text-3xl md:text-4xl font-bold">
             Featured Projects
           </h3>
@@ -43,7 +36,7 @@ const PortfolioSection = () => {
           </p>
         </div>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-10">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-10">
           {featuredProjects.map((project, index) => (
             <ProjectCard 
               key={index} 
