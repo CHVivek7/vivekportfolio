@@ -64,7 +64,7 @@ const AboutSection = () => {
             
             <div className="pt-4">
               <Button asChild className="bg-theme-orange hover:bg-theme-orange/90 text-white">
-                <Link to="/about">More About Me</Link>
+                
               </Button>
             </div>
           </div>
