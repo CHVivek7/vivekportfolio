@@ -123,7 +123,9 @@ Development virtual 
 Internship</h4>
                     <span className="text-theme-orange text-sm">Oct 2024 - Dec 2025</span>
                   </div>
-                  <p className="text-sm text-muted-foreground mb-2">Eduskills Academy</p>
+                  <p className="text-sm text-muted-foreground mb-2">Java Full Stack 
+ Development virtual
+ Internship</p>
                   <p className="text-muted-foreground">
                     Developing and maintaining web applications using Java, Spring Boot, and React. Collaborating with cross-functional teams to deliver high-quality software solutions.
                   </p>
