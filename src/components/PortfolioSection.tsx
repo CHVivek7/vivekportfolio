@@ -7,14 +7,14 @@ const PortfolioSection = () => {
     {
       title: "Slot Management System",
       description: "A comprehensive system for managing booking slots with dynamic pricing and Razorpay integration.",
-      image: "/placeholder.svg",
+      image: "https://i.postimg.cc/L8HQP6NN/booking.jpg", // Updated with a relevant booking/slot management image
       technologies: ["Java", "JSP", "MySQL", "JavaScript", "Razorpay API"],
       link: "#portfolio/slot-management"
     },
     {
       title: "Weather Prediction Web App",
       description: "Real-time weather forecasting application with data visualization and location-based services.",
-      image: "/placeholder.svg",
+      image: "https://i.postimg.cc/gjWymTNL/OIP.jpg", // Using the weather prediction image provided
       technologies: ["HTML", "CSS", "JavaScript", "Weather API", "Responsive Design"],
       link: "#portfolio/weather-app"
     }

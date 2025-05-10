@@ -1,6 +1,7 @@
 
 import { Button } from "@/components/ui/button";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { Briefcase, School, Code } from "lucide-react";
 
 const AboutSection = () => {
   const handleNavClick = (path: string) => {
@@ -46,7 +47,7 @@ const AboutSection = () => {
           {/* About Content */}
           <div className="space-y-6">
             <div className="space-y-4">
-              <h4 className="text-xl font-semibold">Hello, I'm Vivek</h4>
+              <h4 className="text-xl font-semibold">Hello, I'm Chintakrindi Lakshmi Vivek</h4>
               <p className="text-muted-foreground">
                 I'm a passionate Java Full Stack Developer with expertise in building scalable applications and web solutions. With a strong foundation in Java and a comprehensive understanding of both front-end and back-end technologies, I create efficient, robust, and user-friendly applications.
               </p>
@@ -57,9 +58,18 @@ const AboutSection = () => {
             
             <Tabs defaultValue="skills" className="w-full mt-6">
               <TabsList className="grid w-full grid-cols-3">
-                <TabsTrigger value="skills">Technical Skills</TabsTrigger>
-                <TabsTrigger value="education">Education</TabsTrigger>
-                <TabsTrigger value="internships">Internships</TabsTrigger>
+                <TabsTrigger value="skills" className="flex items-center gap-2">
+                  <Code className="h-4 w-4" />
+                  <span>Technical Skills</span>
+                </TabsTrigger>
+                <TabsTrigger value="education" className="flex items-center gap-2">
+                  <School className="h-4 w-4" />
+                  <span>Education</span>
+                </TabsTrigger>
+                <TabsTrigger value="internships" className="flex items-center gap-2">
+                  <Briefcase className="h-4 w-4" />
+                  <span>Internships</span>
+                </TabsTrigger>
               </TabsList>
               
               <TabsContent value="skills" className="space-y-4 pt-4">

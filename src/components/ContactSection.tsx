@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { useToast } from "@/hooks/use-toast";
+import { Phone, Mail, Github, Linkedin } from "lucide-react";
 
 const ContactSection = () => {
   const [formData, setFormData] = useState({
@@ -72,9 +73,19 @@ const ContactSection = () => {
             <div className="space-y-4">
               <div className="flex items-start space-x-4">
                 <div className="bg-theme-orange/10 p-3 rounded-full">
-                  <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-theme-orange" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-                  </svg>
+                  <Phone className="h-6 w-6 text-theme-orange" />
+                </div>
+                <div>
+                  <h5 className="font-medium">Phone</h5>
+                  <a href="tel:+917989200801" className="text-theme-orange hover:underline">
+                    (+91) 7989200801
+                  </a>
+                </div>
+              </div>
+              
+              <div className="flex items-start space-x-4">
+                <div className="bg-theme-orange/10 p-3 rounded-full">
+                  <Mail className="h-6 w-6 text-theme-orange" />
                 </div>
                 <div>
                   <h5 className="font-medium">Email</h5>
