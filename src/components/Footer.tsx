@@ -1,13 +1,24 @@
-import { Link } from "react-router-dom";
+
 const Footer = () => {
   const currentYear = new Date().getFullYear();
-  return <footer className="bg-theme-darker py-12 border-t border-muted/20">
+  
+  const handleNavClick = (path: string) => {
+    const targetId = path.replace("#", "");
+    const element = document.getElementById(targetId);
+    if (element) {
+      window.scrollTo({
+        top: element.offsetTop - 80,
+        behavior: "smooth"
+      });
+    }
+  };
+  
+  return (
+    <footer className="bg-theme-darker py-12 border-t border-muted/20">
       <div className="container mx-auto px-4 md:px-6">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {/* Logo & Info */}
           <div className="space-y-4">
-            
-            
             <div className="pt-4">
               <p className="text-sm text-muted-foreground">
                 &copy; {currentYear} Chintakrindi Lakshmi Vivek. All rights reserved.
@@ -20,29 +31,64 @@ const Footer = () => {
             <h3 className="text-lg font-semibold text-white">Quick Links</h3>
             <ul className="space-y-2">
               <li>
-                <Link to="/" className="text-muted-foreground hover:text-theme-orange transition-colors">
+                <a 
+                  href="#hero" 
+                  onClick={(e) => {
+                    e.preventDefault();
+                    handleNavClick("#hero");
+                  }}
+                  className="text-muted-foreground hover:text-theme-orange transition-colors"
+                >
                   Home
-                </Link>
+                </a>
               </li>
               <li>
-                <Link to="/about" className="text-muted-foreground hover:text-theme-orange transition-colors">
+                <a 
+                  href="#about" 
+                  onClick={(e) => {
+                    e.preventDefault();
+                    handleNavClick("#about");
+                  }}
+                  className="text-muted-foreground hover:text-theme-orange transition-colors"
+                >
                   About
-                </Link>
+                </a>
               </li>
               <li>
-                <Link to="/portfolio" className="text-muted-foreground hover:text-theme-orange transition-colors">
+                <a 
+                  href="#portfolio" 
+                  onClick={(e) => {
+                    e.preventDefault();
+                    handleNavClick("#portfolio");
+                  }}
+                  className="text-muted-foreground hover:text-theme-orange transition-colors"
+                >
                   Portfolio
-                </Link>
+                </a>
               </li>
               <li>
-                <Link to="/services" className="text-muted-foreground hover:text-theme-orange transition-colors">
+                <a 
+                  href="#services" 
+                  onClick={(e) => {
+                    e.preventDefault();
+                    handleNavClick("#services");
+                  }}
+                  className="text-muted-foreground hover:text-theme-orange transition-colors"
+                >
                   Services
-                </Link>
+                </a>
               </li>
               <li>
-                <Link to="/contact" className="text-muted-foreground hover:text-theme-orange transition-colors">
+                <a 
+                  href="#contact" 
+                  onClick={(e) => {
+                    e.preventDefault();
+                    handleNavClick("#contact");
+                  }}
+                  className="text-muted-foreground hover:text-theme-orange transition-colors"
+                >
                   Contact
-                </Link>
+                </a>
               </li>
             </ul>
           </div>
@@ -73,6 +119,8 @@ const Footer = () => {
           </div>
         </div>
       </div>
-    </footer>;
+    </footer>
+  );
 };
+
 export default Footer;
