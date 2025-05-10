@@ -1,20 +1,25 @@
-
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
-
 const About = () => {
-  const skills = [
-    { category: "Programming Languages", items: ["Java", "JavaScript", "TypeScript", "Python"] },
-    { category: "Frontend", items: ["React", "HTML5", "CSS3", "Bootstrap", "Tailwind CSS"] },
-    { category: "Backend", items: ["Spring Boot", "Node.js", "Express", "REST API", "GraphQL"] },
-    { category: "Database", items: ["MySQL", "MongoDB", "PostgreSQL", "Oracle"] },
-    { category: "DevOps & Tools", items: ["Git", "Docker", "Jenkins", "AWS", "Jira"] }
-  ];
-
-  return (
-    <div className="min-h-screen bg-theme-dark text-theme-light">
+  const skills = [{
+    category: "Programming Languages",
+    items: ["Java", "JavaScript", "TypeScript", "Python"]
+  }, {
+    category: "Frontend",
+    items: ["React", "HTML5", "CSS3", "Bootstrap", "Tailwind CSS"]
+  }, {
+    category: "Backend",
+    items: ["Spring Boot", "Node.js", "Express", "REST API", "GraphQL"]
+  }, {
+    category: "Database",
+    items: ["MySQL", "MongoDB", "PostgreSQL", "Oracle"]
+  }, {
+    category: "DevOps & Tools",
+    items: ["Git", "Docker", "Jenkins", "AWS", "Jira"]
+  }];
+  return <div className="min-h-screen bg-theme-dark text-theme-light">
       <Navbar />
 
       {/* Header */}
@@ -90,9 +95,7 @@ const About = () => {
                     <span className="text-theme-orange text-sm">2018 - 2022</span>
                   </div>
                   <p className="text-sm text-muted-foreground mb-2">University Name</p>
-                  <p className="text-muted-foreground">
-                    Completed bachelor's degree with focus on software development, algorithms, and database systems.
-                  </p>
+                  <p className="text-muted-foreground">CGPA : 8.1 (Till date)</p>
                 </div>
                 
                 <div className="bg-theme-dark border border-theme-orange/10 rounded-lg p-6">
@@ -115,10 +118,12 @@ const About = () => {
               <div className="space-y-6">
                 <div className="bg-theme-dark border border-theme-orange/10 rounded-lg p-6">
                   <div className="flex justify-between items-start mb-2">
-                    <h4 className="font-bold">Java Full Stack Developer</h4>
-                    <span className="text-theme-orange text-sm">2022 - Present</span>
+                    <h4 className="font-bold">Java Full Stack 
+Development virtual 
+Internship</h4>
+                    <span className="text-theme-orange text-sm">Oct 2024 - Dec 2025</span>
                   </div>
-                  <p className="text-sm text-muted-foreground mb-2">Company Name</p>
+                  <p className="text-sm text-muted-foreground mb-2">Eduskills Academy</p>
                   <p className="text-muted-foreground">
                     Developing and maintaining web applications using Java, Spring Boot, and React. Collaborating with cross-functional teams to deliver high-quality software solutions.
                   </p>
@@ -126,13 +131,11 @@ const About = () => {
                 
                 <div className="bg-theme-dark border border-theme-orange/10 rounded-lg p-6">
                   <div className="flex justify-between items-start mb-2">
-                    <h4 className="font-bold">Web Developer Intern</h4>
-                    <span className="text-theme-orange text-sm">2021 - 2022</span>
+                    <h4 className="font-bold">Android Developer Intern</h4>
+                    <span className="text-theme-orange text-sm">Jan 2024 - Mar 2024</span>
                   </div>
-                  <p className="text-sm text-muted-foreground mb-2">Company Name</p>
-                  <p className="text-muted-foreground">
-                    Assisted in developing and testing web applications, gaining hands-on experience with front-end technologies and database management.
-                  </p>
+                  <p className="text-sm text-muted-foreground mb-2">Google For Developers</p>
+                  <p className="text-muted-foreground">Assisted in developing and testing mobile applications, gaining hands-on experience.</p>
                 </div>
               </div>
             </div>
@@ -146,18 +149,14 @@ const About = () => {
           <h2 className="text-2xl md:text-3xl font-bold mb-10 text-center">Skills & Expertise</h2>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {skills.map((skillGroup, index) => (
-              <div key={index} className="bg-theme-darker border border-theme-orange/10 rounded-lg p-6">
+            {skills.map((skillGroup, index) => <div key={index} className="bg-theme-darker border border-theme-orange/10 rounded-lg p-6">
                 <h3 className="text-xl font-semibold mb-4 text-theme-orange">{skillGroup.category}</h3>
                 <div className="flex flex-wrap gap-2">
-                  {skillGroup.items.map((skill, idx) => (
-                    <span key={idx} className="bg-theme-orange/10 text-theme-light px-3 py-1 rounded-full text-sm">
+                  {skillGroup.items.map((skill, idx) => <span key={idx} className="bg-theme-orange/10 text-theme-light px-3 py-1 rounded-full text-sm">
                       {skill}
-                    </span>
-                  ))}
+                    </span>)}
                 </div>
-              </div>
-            ))}
+              </div>)}
           </div>
         </div>
       </section>
@@ -185,8 +184,6 @@ const About = () => {
       </section>
 
       <Footer />
-    </div>
-  );
+    </div>;
 };
-
 export default About;
