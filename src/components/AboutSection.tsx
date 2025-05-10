@@ -44,8 +44,8 @@ const AboutSection = () => {
               <div>
                 <h5 className="text-lg font-semibold mb-2">Education</h5>
                 <ul className="space-y-2 text-muted-foreground">
-                  <li>BTech in Computer Science, 2022</li>
-                  <li>Advanced Java Certification, 2023</li>
+                  <li>BTech in Information Technology, 2022-2026</li>
+                  <li>Intermediate, 2020-2022</li>
                 </ul>
               </div>
               
