@@ -1,21 +1,13 @@
-
 import { Link } from "react-router-dom";
-
 const Footer = () => {
   const currentYear = new Date().getFullYear();
-
-  return (
-    <footer className="bg-theme-darker py-12 border-t border-muted/20">
+  return <footer className="bg-theme-darker py-12 border-t border-muted/20">
       <div className="container mx-auto px-4 md:px-6">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {/* Logo & Info */}
           <div className="space-y-4">
-            <Link to="/" className="text-2xl font-bold text-theme-light flex items-center gap-2">
-              <span className="text-theme-orange">V</span>ivek
-            </Link>
-            <p className="text-muted-foreground">
-              Building scalable applications with Java & Full Stack expertise.
-            </p>
+            
+            
             <div className="pt-4">
               <p className="text-sm text-muted-foreground">
                 &copy; {currentYear} Chintakrindi Lakshmi Vivek. All rights reserved.
@@ -67,23 +59,13 @@ const Footer = () => {
               </li>
               <li className="text-muted-foreground">
                 <span className="text-theme-orange">LinkedIn:</span>{" "}
-                <a
-                  href="https://linkedin.com/in/your-linkedin"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="hover:text-theme-orange transition-colors"
-                >
+                <a href="https://linkedin.com/in/your-linkedin" target="_blank" rel="noopener noreferrer" className="hover:text-theme-orange transition-colors">
                   LinkedIn Profile
                 </a>
               </li>
               <li className="text-muted-foreground">
                 <span className="text-theme-orange">GitHub:</span>{" "}
-                <a
-                  href="https://github.com/your-github"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="hover:text-theme-orange transition-colors"
-                >
+                <a href="https://github.com/your-github" target="_blank" rel="noopener noreferrer" className="hover:text-theme-orange transition-colors">
                   GitHub Profile
                 </a>
               </li>
@@ -91,8 +73,6 @@ const Footer = () => {
           </div>
         </div>
       </div>
-    </footer>
-  );
+    </footer>;
 };
-
 export default Footer;

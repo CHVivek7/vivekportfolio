@@ -1,10 +1,7 @@
-
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
-
 const AboutSection = () => {
-  return (
-    <section id="about" className="py-20 relative overflow-hidden">
+  return <section id="about" className="py-20 relative overflow-hidden">
       {/* Background Elements */}
       <div className="absolute top-40 -right-40 w-80 h-80 bg-theme-orange/5 rounded-full blur-3xl z-0"></div>
       
@@ -56,7 +53,7 @@ const AboutSection = () => {
                 <h5 className="text-lg font-semibold mb-2">Technical Skills</h5>
                 <div className="flex flex-wrap gap-2">
                   <span className="bg-theme-orange/10 text-theme-orange px-2 py-1 rounded text-sm">Java</span>
-                  <span className="bg-theme-orange/10 text-theme-orange px-2 py-1 rounded text-sm">Spring Boot</span>
+                  
                   <span className="bg-theme-orange/10 text-theme-orange px-2 py-1 rounded text-sm">React</span>
                   <span className="bg-theme-orange/10 text-theme-orange px-2 py-1 rounded text-sm">MySQL</span>
                   <span className="bg-theme-orange/10 text-theme-orange px-2 py-1 rounded text-sm">JavaScript</span>
@@ -73,8 +70,6 @@ const AboutSection = () => {
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default AboutSection;
