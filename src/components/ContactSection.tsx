@@ -104,13 +104,13 @@ const ContactSection = () => {
                 <div>
                   <h5 className="font-medium">Social Profiles</h5>
                   <div className="flex space-x-3 mt-1">
-                    <a href="https://linkedin.com/in/your-linkedin" target="_blank" rel="noopener noreferrer" className="text-theme-orange hover:underline">
+                    <a href="https://www.linkedin.com/in/chintakrindi-lakshmi-vivek" target="_blank" rel="noopener noreferrer" className="text-theme-orange hover:underline">
                       LinkedIn
                     </a>
-                    <a href="https://github.com/your-github" target="_blank" rel="noopener noreferrer" className="text-theme-orange hover:underline">
+                    <a href="https://github.com/CHVivek7" target="_blank" rel="noopener noreferrer" className="text-theme-orange hover:underline">
                       GitHub
                     </a>
-                    <a href="https://leetcode.com/your-leetcode" target="_blank" rel="noopener noreferrer" className="text-theme-orange hover:underline">
+                    <a href="https://leetcode.com/u/Vivek_1225/" target="_blank" rel="noopener noreferrer" className="text-theme-orange hover:underline">
                       LeetCode
                     </a>
                   </div>

@@ -111,13 +111,13 @@ const Footer = () => {
               </li>
               <li className="text-muted-foreground">
                 <span className="text-theme-orange">LinkedIn:</span>{" "}
-                <a href="https://linkedin.com/in/your-linkedin" target="_blank" rel="noopener noreferrer" className="hover:text-theme-orange transition-colors">
+                <a href="https://www.linkedin.com/in/chintakrindi-lakshmi-vivek" target="_blank" rel="noopener noreferrer" className="hover:text-theme-orange transition-colors">
                   LinkedIn Profile
                 </a>
               </li>
               <li className="text-muted-foreground">
                 <span className="text-theme-orange">GitHub:</span>{" "}
-                <a href="https://github.com/your-github" target="_blank" rel="noopener noreferrer" className="hover:text-theme-orange transition-colors">
+                <a href="https://github.com/CHVivek7" target="_blank" rel="noopener noreferrer" className="hover:text-theme-orange transition-colors">
                   GitHub Profile
                 </a>
               </li>
