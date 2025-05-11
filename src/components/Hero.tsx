@@ -1,8 +1,18 @@
 
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
-import { Link } from "react-router-dom";
+
 const Hero = () => {
+  const scrollToSection = (sectionId: string) => {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      window.scrollTo({
+        top: element.offsetTop - 80, // Offset for navbar height
+        behavior: "smooth"
+      });
+    }
+  };
+
   return <section className="min-h-screen flex flex-col justify-center relative overflow-hidden pt-20 pb-10 px-4 md:px-0">
       {/* Background Elements */}
       <div className="absolute -top-20 -right-20 w-64 h-64 bg-theme-orange/10 rounded-full blur-3xl z-0"></div>
@@ -28,22 +38,29 @@ const Hero = () => {
           <div className="flex flex-wrap gap-4 pt-4 animate-fade-in" style={{
           animationDelay: "0.6s"
         }}>
-            <Button asChild size="lg" className="bg-theme-orange hover:bg-theme-orange/90 text-white">
-              <Link to="/portfolio">
-                View My Work
-                <ArrowRight className="ml-2 h-4 w-4" />
-              </Link>
+            <Button 
+              size="lg" 
+              className="bg-theme-orange hover:bg-theme-orange/90 text-white"
+              onClick={() => scrollToSection('portfolio')}
+            >
+              View My Work
+              <ArrowRight className="ml-2 h-4 w-4" />
             </Button>
             
-            <Button asChild variant="outline" size="lg" className="border-theme-orange text-theme-orange hover:bg-theme-orange/10">
-              <Link to="/contact">Contact Me</Link>
+            <Button 
+              variant="outline" 
+              size="lg" 
+              className="border-theme-orange text-theme-orange hover:bg-theme-orange/10"
+              onClick={() => scrollToSection('contact')}
+            >
+              Contact Me
             </Button>
           </div>
         </div>
         
         <div className="hidden md:flex justify-center items-center animate-slide-in-from-right">
           <div className="relative">
-            {/* Updated profile image */}
+            {/* Profile image without dotted ring */}
             <div className="w-[350px] h-[350px] rounded-full overflow-hidden border-4 border-theme-orange/30 shadow-lg shadow-theme-orange/20">
               <img 
                 src="https://i.postimg.cc/D0f53Y6y/New-Profile-photo-removebg-preview.png" 
@@ -51,9 +68,6 @@ const Hero = () => {
                 className="w-full h-full object-cover"
               />
             </div>
-            
-            {/* Decorative circle */}
-            <div className="absolute -z-10 -bottom-6 -right-6 w-64 h-64 border-2 border-dashed border-theme-orange/20 rounded-full animate-spin-slow"></div>
             
             {/* Experience badge */}
             <div className="absolute top-5 -right-10 bg-theme-darker px-4 py-2 rounded-full border border-theme-orange/20 shadow-lg">
