@@ -1,4 +1,3 @@
-
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
@@ -82,7 +81,7 @@ const Navbar = () => {
       <div className="container mx-auto px-4 md:px-6 lg:px-8">
         <nav className="flex justify-between items-center">
           <a href="#hero" className="text-2xl font-bold text-theme-light flex items-center">
-            <span className="text-theme-orange">V</span>ivek
+            <span className="text-theme-orange">V</span>
           </a>
 
           {/* Desktop Navigation */}

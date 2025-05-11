@@ -1,20 +1,8 @@
 
-import { Button } from "@/components/ui/button";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Briefcase, School, Code } from "lucide-react";
 
 const AboutSection = () => {
-  const handleNavClick = (path: string) => {
-    const targetId = path.replace("#", "");
-    const element = document.getElementById(targetId);
-    if (element) {
-      window.scrollTo({
-        top: element.offsetTop - 80,
-        behavior: "smooth"
-      });
-    }
-  };
-
   return (
     <section className="py-20 relative overflow-hidden">
       {/* Background Elements */}
@@ -142,15 +130,6 @@ const AboutSection = () => {
                 </div>
               </TabsContent>
             </Tabs>
-            
-            <div className="pt-4">
-              <Button 
-                className="bg-theme-orange hover:bg-theme-orange/90 text-white"
-                onClick={() => handleNavClick("#contact")}
-              >
-                Get In Touch
-              </Button>
-            </div>
           </div>
         </div>
       </div>

@@ -1,3 +1,4 @@
+
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
@@ -78,78 +79,86 @@ const About = () => {
         </div>
       </section>
 
-      {/* Education & Experience */}
+      {/* Education Section */}
       <section className="py-12 md:py-16 bg-theme-darker">
         <div className="container mx-auto px-4 md:px-6">
-          <h2 className="text-2xl md:text-3xl font-bold mb-10 text-center">Education & Experience</h2>
+          <h2 className="text-2xl md:text-3xl font-bold mb-10 text-center">Education</h2>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
-            {/* Education */}
-            <div className="space-y-8">
-              <h3 className="text-xl font-semibold inline-block border-b-2 border-theme-orange pb-1">Education</h3>
-              
-              <div className="space-y-6">
-                <div className="bg-theme-dark border border-theme-orange/10 rounded-lg p-6">
-                  <div className="flex justify-between items-start mb-2">
-                    <h4 className="font-bold">BTech in Computer Science</h4>
-                    <span className="text-theme-orange text-sm">2018 - 2022</span>
-                  </div>
-                  <p className="text-sm text-muted-foreground mb-2">University Name</p>
-                  <p className="text-muted-foreground">CGPA : 8.1 (Till date)</p>
-                </div>
-                
-                <div className="bg-theme-dark border border-theme-orange/10 rounded-lg p-6">
-                  <div className="flex justify-between items-start mb-2">
-                    <h4 className="font-bold">Advanced Java Certification</h4>
-                    <span className="text-theme-orange text-sm">2023</span>
-                  </div>
-                  <p className="text-sm text-muted-foreground mb-2">Institute Name</p>
-                  <p className="text-muted-foreground">
-                    Specialized training in advanced Java concepts, Spring framework, and enterprise application development.
-                  </p>
-                </div>
+          <div className="max-w-3xl mx-auto space-y-6">
+            <div className="bg-theme-dark border border-theme-orange/10 rounded-lg p-6">
+              <div className="flex justify-between items-start mb-2">
+                <h4 className="font-bold">BTech in Information Technology</h4>
+                <span className="text-theme-orange text-sm">2018 - 2022</span>
               </div>
+              <p className="text-sm text-muted-foreground mb-2">Vasireddy Venkatadri Institute of Technology</p>
+              <p className="text-muted-foreground">CGPA : 8.1 (Till date)</p>
             </div>
             
-            {/* Experience */}
-            <div className="space-y-8">
-              <h3 className="text-xl font-semibold inline-block border-b-2 border-theme-orange pb-1">Experience</h3>
-              
-              <div className="space-y-6">
-                <div className="bg-theme-dark border border-theme-orange/10 rounded-lg p-6">
-                  <div className="flex justify-between items-start mb-2">
-                    <h4 className="font-bold">Java Full Stack 
-Development virtual 
-Internship</h4>
-                    <span className="text-theme-orange text-sm">Oct 2024 - Dec 2025</span>
-                  </div>
-                  <p className="text-sm text-muted-foreground mb-2">Eduskills Academy</p>
-                  <p className="text-muted-foreground">
-                    Developing and maintaining web applications using Java, Spring Boot, and React. Collaborating with cross-functional teams to deliver high-quality software solutions.
-                  </p>
-                </div>
-                
-                <div className="bg-theme-dark border border-theme-orange/10 rounded-lg p-6">
-                  <div className="flex justify-between items-start mb-2">
-                    <h4 className="font-bold">Android Developer Intern</h4>
-                    <span className="text-theme-orange text-sm">Jan 2024 - Mar 2024</span>
-                  </div>
-                  <p className="text-sm text-muted-foreground mb-2">Google For Developers</p>
-                  <p className="text-muted-foreground">Assisted in developing and testing mobile applications, gaining hands-on experience.</p>
-                </div>
+            <div className="bg-theme-dark border border-theme-orange/10 rounded-lg p-6">
+              <div className="flex justify-between items-start mb-2">
+                <h4 className="font-bold">Intermediate</h4>
+                <span className="text-theme-orange text-sm">2016 - 2018</span>
               </div>
+              <p className="text-sm text-muted-foreground mb-2">Narayana Junior College</p>
+              <p className="text-muted-foreground">Percentage : 89%</p>
+            </div>
+            
+            <div className="bg-theme-dark border border-theme-orange/10 rounded-lg p-6">
+              <div className="flex justify-between items-start mb-2">
+                <h4 className="font-bold">SSC</h4>
+                <span className="text-theme-orange text-sm">2016</span>
+              </div>
+              <p className="text-sm text-muted-foreground mb-2">Sri Chaintanya Techno School</p>
+              <p className="text-muted-foreground">Percentage : 97.5%</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Internships Section */}
+      <section className="py-12 md:py-16">
+        <div className="container mx-auto px-4 md:px-6">
+          <h2 className="text-2xl md:text-3xl font-bold mb-10 text-center">Internship Experience</h2>
+          
+          <div className="max-w-3xl mx-auto space-y-8">
+            <div className="bg-theme-darker border border-theme-orange/10 rounded-lg p-6">
+              <div className="flex justify-between items-start mb-2">
+                <h4 className="font-bold text-theme-orange">Java Full Stack Developer Intern</h4>
+                <span className="text-theme-orange text-sm">Sep 2024 - Nov 2024</span>
+              </div>
+              <p className="text-sm font-medium mb-4">Edu Skills</p>
+              <ul className="list-disc pl-5 text-muted-foreground space-y-2">
+                <li>Developed enterprise-level web applications using Java, JSP, and MySQL as part of a 10-week intensive program.</li>
+                <li>Implemented responsive front-end interfaces with modern JavaScript practices and optimized database queries.</li>
+                <li>Collaborated with senior developers to troubleshoot complex issues across the full stack.</li>
+                <li>Received recognition for outstanding performance and innovative solutions.</li>
+              </ul>
+            </div>
+            
+            <div className="bg-theme-darker border border-theme-orange/10 rounded-lg p-6">
+              <div className="flex justify-between items-start mb-2">
+                <h4 className="font-bold text-theme-orange">Android Development Intern</h4>
+                <span className="text-theme-orange text-sm">Jan 2024 - Mar 2024</span>
+              </div>
+              <p className="text-sm font-medium mb-4">Edu Skills</p>
+              <ul className="list-disc pl-5 text-muted-foreground space-y-2">
+                <li>Participated in a prestigious Google for Developers-supported Android Virtual Internship program.</li>
+                <li>Created and optimized UI components using Android Studio and Material Design principles.</li>
+                <li>Implemented RESTful API integrations and local data persistence solutions.</li>
+                <li>Achieved the highest performance rating for technical skills and project delivery.</li>
+              </ul>
             </div>
           </div>
         </div>
       </section>
 
       {/* Skills */}
-      <section className="py-12 md:py-16">
+      <section className="py-12 md:py-16 bg-theme-darker">
         <div className="container mx-auto px-4 md:px-6">
           <h2 className="text-2xl md:text-3xl font-bold mb-10 text-center">Skills & Expertise</h2>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {skills.map((skillGroup, index) => <div key={index} className="bg-theme-darker border border-theme-orange/10 rounded-lg p-6">
+            {skills.map((skillGroup, index) => <div key={index} className="bg-theme-dark border border-theme-orange/10 rounded-lg p-6">
                 <h3 className="text-xl font-semibold mb-4 text-theme-orange">{skillGroup.category}</h3>
                 <div className="flex flex-wrap gap-2">
                   {skillGroup.items.map((skill, idx) => <span key={idx} className="bg-theme-orange/10 text-theme-light px-3 py-1 rounded-full text-sm">
