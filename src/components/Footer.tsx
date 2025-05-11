@@ -63,7 +63,7 @@ const Footer = () => {
                   }}
                   className="text-muted-foreground hover:text-theme-orange transition-colors"
                 >
-                  Portfolio
+                  Projects
                 </a>
               </li>
               <li>
@@ -97,6 +97,12 @@ const Footer = () => {
           <div className="space-y-4">
             <h3 className="text-lg font-semibold text-white">Contact</h3>
             <ul className="space-y-2">
+              <li className="text-muted-foreground">
+                <span className="text-theme-orange">Phone:</span>{" "}
+                <a href="tel:+917989200801" className="hover:text-theme-orange transition-colors">
+                  (+91) 7989200801
+                </a>
+              </li>
               <li className="text-muted-foreground">
                 <span className="text-theme-orange">Email:</span>{" "}
                 <a href="mailto:vivekch1225@gmail.com" className="hover:text-theme-orange transition-colors">

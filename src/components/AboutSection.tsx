@@ -81,6 +81,8 @@ const AboutSection = () => {
                   <span className="bg-theme-orange/10 text-theme-orange px-2 py-1 rounded text-sm">HTML</span>
                   <span className="bg-theme-orange/10 text-theme-orange px-2 py-1 rounded text-sm">CSS</span>
                   <span className="bg-theme-orange/10 text-theme-orange px-2 py-1 rounded text-sm">JavaScript</span>
+                  <span className="bg-theme-orange/10 text-theme-orange px-2 py-1 rounded text-sm">React</span>
+                  <span className="bg-theme-orange/10 text-theme-orange px-2 py-1 rounded text-sm">J2EE</span>
                   <span className="bg-theme-orange/10 text-theme-orange px-2 py-1 rounded text-sm">JSP</span>
                   <span className="bg-theme-orange/10 text-theme-orange px-2 py-1 rounded text-sm">Servlets</span>
                   <span className="bg-theme-orange/10 text-theme-orange px-2 py-1 rounded text-sm">Java Beans</span>

@@ -1,6 +1,8 @@
+
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { cn } from "@/lib/utils";
+
 interface ProjectCardProps {
   title: string;
   description: string;
@@ -9,6 +11,7 @@ interface ProjectCardProps {
   link: string;
   className?: string;
 }
+
 export function ProjectCard({
   title,
   description,
@@ -43,9 +46,10 @@ export function ProjectCard({
         </div>
         
         <Button asChild variant="outline" className="w-full border-theme-orange text-theme-orange hover:bg-theme-orange/10">
-          
+          <a href={link}>View Project</a>
         </Button>
       </div>
     </div>;
 }
+
 export default ProjectCard;

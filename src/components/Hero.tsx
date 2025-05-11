@@ -1,3 +1,4 @@
+
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
@@ -42,10 +43,13 @@ const Hero = () => {
         
         <div className="hidden md:flex justify-center items-center animate-slide-in-from-right">
           <div className="relative">
-            {/* Profile image placeholder - replace with actual image when available */}
+            {/* Updated profile image */}
             <div className="w-[350px] h-[350px] rounded-full overflow-hidden border-4 border-theme-orange/30 shadow-lg shadow-theme-orange/20">
-              {/* This gradient circle acts as a placeholder for the profile image */}
-              <div className="w-full h-full bg-gradient-to-br from-theme-orange/80 via-theme-orange/50 to-theme-orange/10"></div>
+              <img 
+                src="https://i.postimg.cc/D0f53Y6y/New-Profile-photo-removebg-preview.png" 
+                alt="Profile Photo" 
+                className="w-full h-full object-cover"
+              />
             </div>
             
             {/* Decorative circle */}
