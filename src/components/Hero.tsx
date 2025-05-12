@@ -27,7 +27,7 @@ const Hero = () => {
           }}>
               
               <span className="block">
-                <span className="text-theme-orange"> ASPIRING <br></br>JAVA FULL</span>
+                <span className="text-theme-orange"> Aspiring <br></br>JAVA FULL</span>
               </span>
               <span className="block">STACK</span>
               <span className="title-stroke">DEVELOPER</span>
@@ -37,14 +37,22 @@ const Hero = () => {
           <div className="flex flex-wrap gap-4 pt-4 animate-fade-in" style={{
           animationDelay: "0.6s"
         }}>
-            <Button 
-              size="lg" 
-              className="bg-theme-orange hover:bg-theme-orange/90 text-white"
-              onClick={() => scrollToSection('portfolio')}
-            >
-              View My Work
-              <ArrowRight className="ml-2 h-4 w-4" />
-            </Button>
+            <Button
+  size="lg"
+  className="bg-theme-orange hover:bg-theme-orange/90 text-white"
+  onClick={() => {
+    const downloadLink = 'https://drive.google.com/uc?export=download&id=1r_qnIOHeDOwAVn7L_8OQnG1tVMeniZDO';
+    const link = document.createElement('a');
+    link.href = downloadLink;
+    link.download = 'Your_Name_CV.pdf'; // optional filename
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  }}
+>
+  Download CV
+  <ArrowRight className="ml-2 h-4 w-4" />
+</Button>
             
             <Button 
               variant="outline" 
