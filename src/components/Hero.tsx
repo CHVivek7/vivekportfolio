@@ -41,7 +41,7 @@ const Hero = () => {
               size="lg"
               className="bg-theme-orange hover:bg-theme-orange/90 text-white"
               onClick={() => {
-                const downloadLink = 'https://drive.google.com/uc?export=download&id=1r_qnIOHeDOwAVn7L_8OQnG1tVMeniZDO';
+                const downloadLink = 'https://drive.google.com/file/d/1WTfOteSexsif4lOYjFTfdN4HVPgg8GU_/view?usp=drive_link';
                 const link = document.createElement('a');
                 link.href = downloadLink;
                 link.download = 'Your_Name_CV.pdf'; // optional filename
