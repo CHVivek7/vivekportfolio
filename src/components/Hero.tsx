@@ -40,15 +40,7 @@ const Hero = () => {
             <Button
   size="lg"
   className="bg-theme-orange hover:bg-theme-orange/90 text-white"
-  onClick={() => {
-    const downloadLink = 'https://drive.google.com/uc?export=download&id=1r_qnIOHeDOwAVn7L_8OQnG1tVMeniZDO';
-    const link = document.createElement('a');
-    link.href = downloadLink;
-    link.download = 'Your_Name_CV.pdf'; // optional filename
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
-  }}
+  onClick={() => window.open('https://drive.google.com/uc?export=download&id=1r_qnIOHeDOwAVn7L_8OQnG1tVMeniZDO', '_blank')}
 >
   Download CV
   <ArrowRight className="ml-2 h-4 w-4" />
