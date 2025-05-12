@@ -27,7 +27,7 @@ const Hero = () => {
           }}>
               
               <span className="block">
-                <span className="text-theme-orange">JAVA FULL</span>
+                <span className="text-theme-orange"> ASPIRING <br></br>JAVA FULL</span>
               </span>
               <span className="block">STACK</span>
               <span className="title-stroke">DEVELOPER</span>
