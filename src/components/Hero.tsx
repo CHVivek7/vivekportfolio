@@ -18,8 +18,8 @@ const Hero = () => {
       <div className="absolute -top-20 -right-20 w-64 h-64 bg-theme-orange/10 rounded-full blur-3xl z-0"></div>
       <div className="absolute bottom-0 left-0 w-96 h-96 bg-theme-orange/5 rounded-full blur-3xl z-0"></div>
       
-      <div className="container mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 items-center z-10">
-        <div className="space-y-6 md:space-y-8">
+      <div className="container mx-auto">
+        <div className="space-y-6 md:space-y-8 max-w-3xl">
           <div className="flex flex-col gap-3 md:gap-4">
             <h2 className="text-sm sm:text-base md:text-lg tracking-wider font-medium text-theme-orange animate-fade-in">HI, I'M CHINTAKRINDI LAKSHMI Vivek</h2>
             <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold leading-tight animate-fade-in" style={{
@@ -32,8 +32,6 @@ const Hero = () => {
               <span className="title-stroke">DEVELOPER</span>
             </h1>
           </div>
-          
-          
           
           <div className="flex flex-wrap gap-4 pt-4 animate-fade-in" style={{
           animationDelay: "0.6s"
@@ -55,24 +53,6 @@ const Hero = () => {
             >
               Contact Me
             </Button>
-          </div>
-        </div>
-        
-        <div className="hidden md:flex justify-center items-center animate-slide-in-from-right">
-          <div className="relative">
-            {/* Profile image with regular border, no dotted ring */}
-            <div className="w-[350px] h-[350px] overflow-hidden border-4 border-theme-orange/30 shadow-lg shadow-theme-orange/20">
-              <img 
-                src="https://i.postimg.cc/D0f53Y6y/New-Profile-photo-removebg-preview.png" 
-                alt="Profile Photo" 
-                className="w-full h-full object-cover"
-              />
-            </div>
-            
-            {/* Experience badge */}
-            <div className="absolute top-5 -right-10 bg-theme-darker px-4 py-2 rounded-full border border-theme-orange/20 shadow-lg">
-              <span className="text-sm font-medium text-theme-orange">Java Expert</span>
-            </div>
           </div>
         </div>
       </div>
