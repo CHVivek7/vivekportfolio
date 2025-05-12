@@ -9,14 +9,14 @@ const PortfolioSection = () => {
       description: "A comprehensive system for managing booking slots with dynamic pricing and Razorpay integration.",
       image: "https://i.postimg.cc/zfWxCh35/Gemini-Generated-Image-xtf3mvxtf3mvxtf3.jpg", // Updated slot management system image
       technologies: ["Java", "JSP", "MySQL", "JavaScript", "Razorpay API"],
-      link: "#portfolio/slot-management"
+      link: "https://github.com/CHVivek7/Box-cricket"
     },
     {
       title: "Weather Prediction Web App",
       description: "Real-time weather forecasting application with data visualization and location-based services.",
       image: "https://i.postimg.cc/gjWymTNL/OIP.jpg", // Weather prediction image
       technologies: ["HTML", "CSS", "JavaScript", "Weather API", "Responsive Design"],
-      link: "#portfolio/weather-app"
+      link: "https://app.netlify.com/sites/famous-moxie-9d1aaa/overview"
     }
   ];
 
