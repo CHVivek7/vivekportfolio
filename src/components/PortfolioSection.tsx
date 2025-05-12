@@ -16,7 +16,7 @@ const PortfolioSection = () => {
       description: "Real-time weather forecasting application with data visualization and location-based services.",
       image: "https://i.postimg.cc/gjWymTNL/OIP.jpg", // Weather prediction image
       technologies: ["HTML", "CSS", "JavaScript", "Weather API", "Responsive Design"],
-      link: "https://app.netlify.com/sites/famous-moxie-9d1aaa/overview"
+      link: "https://myweatherdetection.netlify.app/"
     }
   ];
 
