@@ -11,7 +11,7 @@ const Hero = () => {
         behavior: "smooth"
       });
     }
-  };
+  }; 
 
   return <section className="min-h-screen flex flex-col justify-center relative overflow-hidden pt-20 pb-10 px-4 md:px-0">
       {/* Background Elements */}
