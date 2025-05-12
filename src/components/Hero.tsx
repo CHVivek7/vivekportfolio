@@ -60,8 +60,8 @@ const Hero = () => {
         
         <div className="hidden md:flex justify-center items-center animate-slide-in-from-right">
           <div className="relative">
-            {/* Profile image without dotted ring */}
-            <div className="w-[350px] h-[350px] rounded-full overflow-hidden border-4 border-theme-orange/30 shadow-lg shadow-theme-orange/20">
+            {/* Profile image with regular border, no dotted ring */}
+            <div className="w-[350px] h-[350px] overflow-hidden border-4 border-theme-orange/30 shadow-lg shadow-theme-orange/20">
               <img 
                 src="https://i.postimg.cc/D0f53Y6y/New-Profile-photo-removebg-preview.png" 
                 alt="Profile Photo" 

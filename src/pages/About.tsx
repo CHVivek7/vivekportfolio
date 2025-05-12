@@ -126,7 +126,7 @@ const About = () => {
                 <h4 className="font-bold text-theme-orange">Java Full Stack Developer Intern</h4>
                 <span className="text-theme-orange text-sm">Sep 2024 - Nov 2024</span>
               </div>
-              <p className="text-sm font-medium mb-4">Edu Skills</p>
+              <p className="text-sm font-medium mb-4">Google for Developers</p>
               <ul className="list-disc pl-5 text-muted-foreground space-y-2">
                 <li>Developed enterprise-level web applications using Java, JSP, and MySQL as part of a 10-week intensive program.</li>
                 <li>Implemented responsive front-end interfaces with modern JavaScript practices and optimized database queries.</li>
@@ -140,7 +140,7 @@ const About = () => {
                 <h4 className="font-bold text-theme-orange">Android Development Intern</h4>
                 <span className="text-theme-orange text-sm">Jan 2024 - Mar 2024</span>
               </div>
-              <p className="text-sm font-medium mb-4">Edu Skills</p>
+              <p className="text-sm font-medium mb-4">Google for Developers</p>
               <ul className="list-disc pl-5 text-muted-foreground space-y-2">
                 <li>Participated in a prestigious Google for Developers-supported Android Virtual Internship program.</li>
                 <li>Created and optimized UI components using Android Studio and Material Design principles.</li>
