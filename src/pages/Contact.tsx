@@ -6,6 +6,8 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { useState } from "react";
 import { useToast } from "@/hooks/use-toast";
+import { AlertCircle } from "lucide-react";
+import emailjs from '@emailjs/browser';
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -15,21 +17,47 @@ const Contact = () => {
     message: ""
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [formError, setFormError] = useState("");
   const { toast } = useToast();
+
+  // Initialize EmailJS
+  const initEmailJs = () => {
+    emailjs.init("v5-coqAAeci9IUKUE");
+  };
+
+  // Call init function
+  initEmailJs();
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
     setFormData(prev => ({ ...prev, [name]: value }));
+    if (formError) setFormError("");
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
+    setFormError("");
     
-    // This is a placeholder for the actual form submission
-    // In a real application, you would send this data to a server
-    setTimeout(() => {
-      console.log("Form submitted:", formData);
+    try {
+      // Prepare template parameters
+      const templateParams = {
+        from_name: formData.name,
+        from_email: formData.email,
+        subject: formData.subject,
+        message: formData.message
+      };
+      
+      // Send email using EmailJS
+      const response = await emailjs.send(
+        "service_3m95idl", // Service ID
+        "template_zppcrfl", // Template ID
+        templateParams
+      );
+      
+      console.log("Email sent successfully:", response);
+      
+      // Show success toast
       toast({
         title: "Message sent!",
         description: "Thank you for your message. I'll respond as soon as possible.",
@@ -43,9 +71,18 @@ const Contact = () => {
         subject: "",
         message: ""
       });
-      
+    } catch (error) {
+      console.error("Failed to send email:", error);
+      setFormError("Failed to send message. Please try again later.");
+      toast({
+        variant: "destructive",
+        title: "Error sending message",
+        description: "There was a problem sending your message. Please try again.",
+        duration: 5000,
+      });
+    } finally {
       setIsSubmitting(false);
-    }, 1000);
+    }
   };
 
   return (
@@ -106,13 +143,13 @@ const Contact = () => {
                   <div>
                     <h5 className="font-medium">Social Profiles</h5>
                     <div className="flex space-x-3 mt-1">
-                      <a href="https://linkedin.com/in/your-linkedin" target="_blank" rel="noopener noreferrer" className="text-theme-orange hover:underline">
+                      <a href="https://www.linkedin.com/in/chintakrindi-lakshmi-vivek" target="_blank" rel="noopener noreferrer" className="text-theme-orange hover:underline">
                         LinkedIn
                       </a>
-                      <a href="https://github.com/your-github" target="_blank" rel="noopener noreferrer" className="text-theme-orange hover:underline">
+                      <a href="https://github.com/CHVivek7" target="_blank" rel="noopener noreferrer" className="text-theme-orange hover:underline">
                         GitHub
                       </a>
-                      <a href="https://leetcode.com/your-leetcode" target="_blank" rel="noopener noreferrer" className="text-theme-orange hover:underline">
+                      <a href="https://leetcode.com/u/Vivek_1225/" target="_blank" rel="noopener noreferrer" className="text-theme-orange hover:underline">
                         LeetCode
                       </a>
                     </div>
@@ -154,6 +191,7 @@ const Contact = () => {
                       onChange={handleChange}
                       required
                       className="bg-theme-dark border-theme-orange/20 focus:border-theme-orange focus-visible:ring-theme-orange"
+                      disabled={isSubmitting}
                     />
                   </div>
                   
@@ -168,6 +206,7 @@ const Contact = () => {
                       onChange={handleChange}
                       required
                       className="bg-theme-dark border-theme-orange/20 focus:border-theme-orange focus-visible:ring-theme-orange"
+                      disabled={isSubmitting}
                     />
                   </div>
                   
@@ -181,6 +220,7 @@ const Contact = () => {
                       onChange={handleChange}
                       required
                       className="bg-theme-dark border-theme-orange/20 focus:border-theme-orange focus-visible:ring-theme-orange"
+                      disabled={isSubmitting}
                     />
                   </div>
                   
@@ -195,16 +235,32 @@ const Contact = () => {
                       onChange={handleChange}
                       required
                       className="bg-theme-dark border-theme-orange/20 focus:border-theme-orange focus-visible:ring-theme-orange"
+                      disabled={isSubmitting}
                     />
                   </div>
                 </div>
+                
+                {formError && (
+                  <div className="flex items-center gap-2 text-red-500 text-sm">
+                    <AlertCircle className="h-4 w-4" />
+                    <span>{formError}</span>
+                  </div>
+                )}
                 
                 <Button 
                   type="submit" 
                   className="w-full bg-theme-orange hover:bg-theme-orange/90 text-white"
                   disabled={isSubmitting}
                 >
-                  {isSubmitting ? "Sending..." : "Send Message"}
+                  {isSubmitting ? (
+                    <span className="flex items-center gap-2">
+                      <svg className="animate-spin -ml-1 mr-2 h-4 w-4 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                        <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
+                        <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                      </svg>
+                      Sending...
+                    </span>
+                  ) : "Send Message"}
                 </Button>
               </form>
             </div>

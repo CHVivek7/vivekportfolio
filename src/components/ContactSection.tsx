@@ -4,7 +4,8 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { useToast } from "@/hooks/use-toast";
-import { Phone, Mail, Github, Linkedin } from "lucide-react";
+import { Phone, Mail, Github, Linkedin, AlertCircle, Check } from "lucide-react";
+import emailjs from '@emailjs/browser';
 
 const ContactSection = () => {
   const [formData, setFormData] = useState({
@@ -14,21 +15,47 @@ const ContactSection = () => {
     message: ""
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [formError, setFormError] = useState("");
   const { toast } = useToast();
+
+  // Initialize EmailJS
+  const initEmailJs = () => {
+    emailjs.init("v5-coqAAeci9IUKUE");
+  };
+
+  // Call init function
+  initEmailJs();
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
     setFormData(prev => ({ ...prev, [name]: value }));
+    if (formError) setFormError("");
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
+    setFormError("");
     
-    // This is a placeholder for the actual form submission
-    // In a real application, you would send this data to a server
-    setTimeout(() => {
-      console.log("Form submitted:", formData);
+    try {
+      // Prepare template parameters
+      const templateParams = {
+        from_name: formData.name,
+        from_email: formData.email,
+        subject: formData.subject,
+        message: formData.message
+      };
+      
+      // Send email using EmailJS
+      const response = await emailjs.send(
+        "service_3m95idl", // Service ID
+        "template_zppcrfl", // Template ID
+        templateParams
+      );
+      
+      console.log("Email sent successfully:", response);
+      
+      // Show success toast
       toast({
         title: "Message sent!",
         description: "Thank you for your message. I'll respond as soon as possible.",
@@ -42,9 +69,18 @@ const ContactSection = () => {
         subject: "",
         message: ""
       });
-      
+    } catch (error) {
+      console.error("Failed to send email:", error);
+      setFormError("Failed to send message. Please try again later.");
+      toast({
+        variant: "destructive",
+        title: "Error sending message",
+        description: "There was a problem sending your message. Please try again.",
+        duration: 5000,
+      });
+    } finally {
       setIsSubmitting(false);
-    }, 1000);
+    }
   };
 
   return (
@@ -64,6 +100,7 @@ const ContactSection = () => {
         </div>
         
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
+          {/* Contact info section */}
           <div className="space-y-6">
             <h4 className="text-2xl font-bold">Contact Information</h4>
             <p className="text-muted-foreground">
@@ -126,6 +163,7 @@ const ContactSection = () => {
             </div>
           </div>
           
+          {/* Contact form section */}
           <div className="bg-theme-dark border border-theme-orange/10 rounded-lg p-6 md:p-8 shadow-lg">
             <form onSubmit={handleSubmit} className="space-y-6">
               <div className="space-y-4">
@@ -139,6 +177,7 @@ const ContactSection = () => {
                     onChange={handleChange}
                     required
                     className="bg-theme-darker border-theme-orange/20 focus:border-theme-orange focus-visible:ring-theme-orange"
+                    disabled={isSubmitting}
                   />
                 </div>
                 
@@ -153,6 +192,7 @@ const ContactSection = () => {
                     onChange={handleChange}
                     required
                     className="bg-theme-darker border-theme-orange/20 focus:border-theme-orange focus-visible:ring-theme-orange"
+                    disabled={isSubmitting}
                   />
                 </div>
                 
@@ -166,6 +206,7 @@ const ContactSection = () => {
                     onChange={handleChange}
                     required
                     className="bg-theme-darker border-theme-orange/20 focus:border-theme-orange focus-visible:ring-theme-orange"
+                    disabled={isSubmitting}
                   />
                 </div>
                 
@@ -180,16 +221,32 @@ const ContactSection = () => {
                     onChange={handleChange}
                     required
                     className="bg-theme-darker border-theme-orange/20 focus:border-theme-orange focus-visible:ring-theme-orange"
+                    disabled={isSubmitting}
                   />
                 </div>
               </div>
+              
+              {formError && (
+                <div className="flex items-center gap-2 text-red-500 text-sm">
+                  <AlertCircle className="h-4 w-4" />
+                  <span>{formError}</span>
+                </div>
+              )}
               
               <Button 
                 type="submit" 
                 className="w-full bg-theme-orange hover:bg-theme-orange/90 text-white"
                 disabled={isSubmitting}
               >
-                {isSubmitting ? "Sending..." : "Send Message"}
+                {isSubmitting ? (
+                  <span className="flex items-center gap-2">
+                    <svg className="animate-spin -ml-1 mr-2 h-4 w-4 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                      <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
+                      <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                    </svg>
+                    Sending...
+                  </span>
+                ) : "Send Message"}
               </Button>
             </form>
           </div>
