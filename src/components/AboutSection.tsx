@@ -108,7 +108,7 @@ const AboutSection = () => {
                 <div className="space-y-4">
                   <div className="bg-theme-orange/5 p-4 rounded-lg">
                     <h5 className="font-semibold text-theme-orange">Java Full Stack Developer Intern</h5>
-                    <p className="text-sm font-medium mb-2">Google for Developers – Sep 2024 to Nov 2024</p>
+                    <p className="text-sm font-medium mb-2">Eduskills Academy – Sep 2024 to Nov 2024</p>
                     <ul className="list-disc pl-5 text-sm text-muted-foreground space-y-1">
                       <li>Developed enterprise-level web applications using Java, JSP, and MySQL as part of a 10-week intensive program.</li>
                       <li>Implemented responsive front-end interfaces with modern JavaScript practices and optimized database queries.</li>
