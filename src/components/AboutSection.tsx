@@ -74,11 +74,13 @@ const AboutSection = () => {
                   <span className="bg-theme-orange/10 text-theme-orange px-2 py-1 rounded text-sm">JSP</span>
                   <span className="bg-theme-orange/10 text-theme-orange px-2 py-1 rounded text-sm">Servlets</span>
                   <span className="bg-theme-orange/10 text-theme-orange px-2 py-1 rounded text-sm">Java Beans</span>
-                  <span className="bg-theme-orange/10 text-theme-orange px-2 py-1 rounded text-sm">JDBC</span>
+                  <span className="bg-theme-orange/10 text-theme-orange px-2 py-1 rounded text-sm">REST API</span>
                   <span className="bg-theme-orange/10 text-theme-orange px-2 py-1 rounded text-sm">MySQL</span>
                   <span className="bg-theme-orange/10 text-theme-orange px-2 py-1 rounded text-sm">Linux</span>
                   <span className="bg-theme-orange/10 text-theme-orange px-2 py-1 rounded text-sm">Windows</span>
                   <span className="bg-theme-orange/10 text-theme-orange px-2 py-1 rounded text-sm">Git</span>
+                  <span className="bg-theme-orange/10 text-theme-orange px-2 py-1 rounded text-sm">Spring</span>
+                  <span className="bg-theme-orange/10 text-theme-orange px-2 py-1 rounded text-sm">Junit</span>
                 </div>
               </TabsContent>
               
