@@ -54,6 +54,10 @@ const AboutSection = () => {
                   <School className="h-4 w-4" />
                   <span>Education</span>
                 </TabsTrigger>
+                 <TabsTrigger value="Certifications" className="flex items-center gap-2">
+                  <School className="h-4 w-4" />
+                  <span>Certifications</span>
+                </TabsTrigger>
                 <TabsTrigger value="internships" className="flex items-center gap-2">
                   <Briefcase className="h-4 w-4" />
                   <span>Internships</span>
