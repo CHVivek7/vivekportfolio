@@ -41,13 +41,11 @@ const Hero = () => {
               size="lg"
               className="bg-theme-orange hover:bg-theme-orange/90 text-white"
               onClick={() => {
-                const downloadLink = 'https://drive.google.com/file/d/1MsETiwJjqmXpkH63VyrqNDJuq5_TiX09/view';
-                const link = document.createElement('a');
-                link.href = downloadLink;
-                link.download = 'Your_Name_CV.pdf'; // optional filename
-                document.body.appendChild(link);
-                link.click();
-                document.body.removeChild(link);
+                window.open(
+                  'https://drive.google.com/file/d/1MsETiwJjqmXpkH63VyrqNDJuq5_TiX09/view',
+                  '_blank',
+                  'noopener,noreferrer'
+                );
               }}
             >
               Download CV
