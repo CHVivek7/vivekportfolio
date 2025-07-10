@@ -1,4 +1,3 @@
-
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Briefcase, School, Code } from "lucide-react";
 
@@ -45,7 +44,7 @@ const AboutSection = () => {
             </div>
             
             <Tabs defaultValue="skills" className="w-full mt-6">
-              <TabsList className="grid w-full grid-cols-3">
+              <TabsList className="grid w-full grid-cols-4">
                 <TabsTrigger value="skills" className="flex items-center gap-2">
                   <Code className="h-4 w-4" />
                   <span>Technical Skills</span>
@@ -54,7 +53,7 @@ const AboutSection = () => {
                   <School className="h-4 w-4" />
                   <span>Education</span>
                 </TabsTrigger>
-                 <TabsTrigger value="Certifications" className="flex items-center gap-2">
+                <TabsTrigger value="Certifications" className="flex items-center gap-2">
                   <School className="h-4 w-4" />
                   <span>Certifications</span>
                 </TabsTrigger>
@@ -109,6 +108,7 @@ const AboutSection = () => {
                   </div>
                 </div>
               </TabsContent>
+              
               <TabsContent value="Certifications" className="space-y-4 pt-4">
                 <div className="space-y-4">
                   <div className="bg-theme-orange/5 p-4 rounded-lg">
@@ -150,6 +150,7 @@ const AboutSection = () => {
                   </div>
                 </div>
               </TabsContent>
+
               <TabsContent value="internships" className="space-y-4 pt-4">
                 <div className="space-y-4">
                   <div className="bg-theme-orange/5 p-4 rounded-lg">
