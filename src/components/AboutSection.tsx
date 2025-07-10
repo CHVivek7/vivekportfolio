@@ -44,20 +44,20 @@ const AboutSection = () => {
             </div>
             
             <Tabs defaultValue="skills" className="w-full mt-6">
-              <TabsList className="grid w-full grid-cols-4">
-                <TabsTrigger value="skills" className="flex items-center gap-2">
+              <TabsList className="flex w-full">
+                <TabsTrigger value="skills" className="flex-1 flex items-center gap-2 justify-center">
                   <Code className="h-4 w-4" />
                   <span>Technical Skills</span>
                 </TabsTrigger>
-                <TabsTrigger value="education" className="flex items-center gap-2">
+                <TabsTrigger value="education" className="flex-1 flex items-center gap-2 justify-center">
                   <School className="h-4 w-4" />
                   <span>Education</span>
                 </TabsTrigger>
-                <TabsTrigger value="Certifications" className="flex items-center gap-2">
+                <TabsTrigger value="Certifications" className="flex-1 flex items-center gap-2 justify-center">
                   <School className="h-4 w-4" />
                   <span>Certifications</span>
                 </TabsTrigger>
-                <TabsTrigger value="internships" className="flex items-center gap-2">
+                <TabsTrigger value="internships" className="flex-1 flex items-center gap-2 justify-center">
                   <Briefcase className="h-4 w-4" />
                   <span>Internships</span>
                 </TabsTrigger>
