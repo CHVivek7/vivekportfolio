@@ -37,20 +37,11 @@ const Hero = () => {
           <div className="flex flex-wrap gap-4 pt-4 animate-fade-in" style={{
           animationDelay: "0.6s"
         }}>
-            <Button
-              size="lg"
-              className="bg-theme-orange hover:bg-theme-orange/90 text-white"
-              onClick={() => {
-                window.open(
-                  'https://drive.google.com/file/d/1MsETiwJjqmXpkH63VyrqNDJuq5_TiX09/view',
-                  '_blank',
-                  'noopener,noreferrer'
-                );
-              }}
-            >
-              Download CV
-              <ArrowRight className="ml-2 h-4 w-4" />
-            </Button>
+            <a
+                      href="https://archive.nptel.ac.in/content/noc/NOC24/SEM1/Ecertificates/106/noc24-cs43/Course/NPTEL24CS43S106990319830344987.pdf"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
             
             <Button 
               variant="outline" 
