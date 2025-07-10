@@ -105,7 +105,47 @@ const AboutSection = () => {
                   </div>
                 </div>
               </TabsContent>
+              <TabsContent value="Certifications" className="space-y-4 pt-4">
+                <div className="space-y-4">
+                  <div className="bg-theme-orange/5 p-4 rounded-lg">
+                    <h5 className="font-semibold text-theme-orange">Associate Google Cloud Engineer</h5>
+                    <p className="text-sm font-medium mb-2">Google Cloud – Issued Jul 2024</p>
+                    <ul className="list-disc pl-5 text-sm text-muted-foreground space-y-1">
+                      <li>Demonstrated hands-on ability to deploy, manage, and monitor cloud applications on the Google Cloud Platform.</li>
+                      <li>Proficient in configuring cloud solutions, managing storage and network resources, and ensuring security best practices.</li>
+                      <li>Validated expertise with real-world scenarios and industry-standard cloud practices.</li>
+                    </ul>
+                    <a
+                      href="https://www.credly.com/badges/645bb82c-f339-41b7-a542-4fb9937855a3/public_url"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <button className="mt-3 px-4 py-2 rounded bg-theme-orange text-white font-semibold hover:bg-theme-orange/80 transition-colors">
+                        View Certificate
+                      </button>
+                    </a>
+                  </div>
               
+                  <div className="bg-theme-orange/5 p-4 rounded-lg">
+                    <h5 className="font-semibold text-theme-orange">Programming in Java</h5>
+                    <p className="text-sm font-medium mb-2">NPTEL – Issued Mar 2024</p>
+                    <ul className="list-disc pl-5 text-sm text-muted-foreground space-y-1">
+                      <li>Completed a comprehensive course covering Java fundamentals, OOP concepts, and advanced programming techniques.</li>
+                      <li>Applied core Java skills in practical assignments, mini-projects, and online assessments.</li>
+                      <li>Certified by India’s premier online learning platform for technical education (NPTEL).</li>
+                    </ul>
+                    <a
+                      href="https://archive.nptel.ac.in/content/noc/NOC24/SEM1/Ecertificates/106/noc24-cs43/Course/NPTEL24CS43S106990319830344987.pdf"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <button className="mt-3 px-4 py-2 rounded bg-theme-orange text-white font-semibold hover:bg-theme-orange/80 transition-colors">
+                        View Certificate
+                      </button>
+                    </a>
+                  </div>
+                </div>
+              </TabsContent>
               <TabsContent value="internships" className="space-y-4 pt-4">
                 <div className="space-y-4">
                   <div className="bg-theme-orange/5 p-4 rounded-lg">
