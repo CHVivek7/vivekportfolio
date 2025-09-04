@@ -38,7 +38,7 @@ const Hero = () => {
           animationDelay: "0.6s"
         }}>
             <a
-                      href="https://archive.nptel.ac.in/content/noc/NOC24/SEM1/Ecertificates/106/noc24-cs43/Course/NPTEL24CS43S106990319830344987.pdf"
+                      href="https://drive.google.com/file/d/1SRriysyfhOMlULsiu0lS5pTRwjbfYXij/view?usp=sharing"
                       target="_blank"
                       rel="noopener noreferrer"
                     >
