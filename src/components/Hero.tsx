@@ -46,6 +46,14 @@ const Hero = () => {
               rel="noopener noreferrer"
             >
               <Button 
+                variant="default" 
+                size="lg" 
+                className="bg-theme-orange text-white hover:bg-theme-orange/90"
+              >
+                Download CV
+              </Button>
+            </a>
+            <Button 
                 variant="outline" 
                 size="lg" 
                 className="border-theme-orange text-theme-orange hover:bg-theme-orange/10"
@@ -53,7 +61,6 @@ const Hero = () => {
               >
                 Contact Me
               </Button>
-            </a>
           </div>
         </div>
       </div>
