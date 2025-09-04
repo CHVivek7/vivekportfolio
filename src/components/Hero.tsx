@@ -41,7 +41,7 @@ const Hero = () => {
             style={{ animationDelay: "0.6s" }}
           >
             <a
-              href="https://drive.google.com/file/d/1SRriysyfhOMlULsiu0lS5pTRwjbfYXij/view?usp=sharing"
+              href="https://drive.google.com/file/d/1gIjM6iORq0eIvOb4knau5ald9adm-zpR/view?usp=sharing"
               target="_blank"
               rel="noopener noreferrer"
             >
