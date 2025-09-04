@@ -92,7 +92,7 @@ const AboutSection = () => {
                   <div className="bg-theme-orange/5 p-3 rounded-lg">
                     <h5 className="font-semibold">B.Tech in Information Technology</h5>
                     <p className="text-sm text-muted-foreground">Vasireddy Venkatadri Institute of Technology</p>
-                    <p className="text-sm text-theme-orange">CGPA: 8.1 (Till date)</p>
+                    <p className="text-sm text-theme-orange">CGPA: 8.05 (Till date)</p>
                   </div>
                   
                   <div className="bg-theme-orange/5 p-3 rounded-lg">
