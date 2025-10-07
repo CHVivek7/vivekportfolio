@@ -130,7 +130,7 @@ const AboutSection = () => {
                       rel="noopener noreferrer"
                     >
                       <button className="mt-3 px-4 py-2 rounded bg-theme-orange text-white font-semibold hover:bg-theme-orange/80 transition-colors">
-                        View Certificate
+                        View Credential
                       </button>
                     </a>
                   </div>
@@ -149,7 +149,7 @@ const AboutSection = () => {
                       rel="noopener noreferrer"
                     >
                       <button className="mt-3 px-4 py-2 rounded bg-theme-orange text-white font-semibold hover:bg-theme-orange/80 transition-colors">
-                        View Certificate
+                        View Credential
                       </button>
                     </a>
                   </div>
@@ -168,7 +168,7 @@ const AboutSection = () => {
                       rel="noopener noreferrer"
                     >
                       <button className="mt-3 px-4 py-2 rounded bg-theme-orange text-white font-semibold hover:bg-theme-orange/80 transition-colors">
-                        View Certificate
+                        View Credential
                       </button>
                     </a>
                   </div>
@@ -187,7 +187,7 @@ const AboutSection = () => {
                       rel="noopener noreferrer"
                     >
                       <button className="mt-3 px-4 py-2 rounded bg-theme-orange text-white font-semibold hover:bg-theme-orange/80 transition-colors">
-                        View Certificate
+                        View Credential
                       </button>
                     </a>
                   </div>
