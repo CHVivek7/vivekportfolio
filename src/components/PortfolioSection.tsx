@@ -17,7 +17,22 @@ const PortfolioSection = () => {
       image: "https://i.postimg.cc/gjWymTNL/OIP.jpg", // Weather prediction image
       technologies: ["HTML", "CSS", "JavaScript", "Weather API", "Responsive Design"],
       link: "https://myweatherdetection.netlify.app/"
+    },
+    {
+      title: "Event Management System",
+      description: "Engineered a secure and scalable RESTful API to power an event management platform, handling all server-side logic for events, users, and bookings.",
+      image: "https://i.postimg.cc/qMvCZ5VN/unnamed.jpg", // Event management image
+      technologies: ["Spring Boot", "Spring Security", "MySQL", "JWT Authentication"],
+      link: "https://github.com/CHVivek7/Event_Management"
+    },
+    {
+      title: "Phising URL Detection",
+      description: "An intelligent security tool designed to safeguard digital assets by identifying phishing attacks in real-time and monitoring the dark web for emerging threats",
+      image: "https://i.postimg.cc/nrpnMrfg/unnamed.jpg",
+      technologies: ["Flask", "Python", "Scikit-learn", "Pandas & NumPy","Joblib"],
+      link: "https://url-phishing-qddg.onrender.com/"
     }
+
   ];
 
   return (

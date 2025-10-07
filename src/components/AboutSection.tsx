@@ -82,8 +82,13 @@ const AboutSection = () => {
                   <span className="bg-theme-orange/10 text-theme-orange px-2 py-1 rounded text-sm">Linux</span>
                   <span className="bg-theme-orange/10 text-theme-orange px-2 py-1 rounded text-sm">Windows</span>
                   <span className="bg-theme-orange/10 text-theme-orange px-2 py-1 rounded text-sm">Git</span>
-                  <span className="bg-theme-orange/10 text-theme-orange px-2 py-1 rounded text-sm">Spring</span>
+                  <span className="bg-theme-orange/10 text-theme-orange px-2 py-1 rounded text-sm">Spring Boot</span>
                   <span className="bg-theme-orange/10 text-theme-orange px-2 py-1 rounded text-sm">Junit</span>
+                  <span className="bg-theme-orange/10 text-theme-orange px-2 py-1 rounded text-sm">JWT Authentication</span>
+                  <span className="bg-theme-orange/10 text-theme-orange px-2 py-1 rounded text-sm">Flask</span>
+                  <span className="bg-theme-orange/10 text-theme-orange px-2 py-1 rounded text-sm">Python</span>
+                  <span className="bg-theme-orange/10 text-theme-orange px-2 py-1 rounded text-sm">AWS Cloud</span>
+                  <span className="bg-theme-orange/10 text-theme-orange px-2 py-1 rounded text-sm">Google Cloud</span>
                 </div>
               </TabsContent>
               
@@ -91,19 +96,19 @@ const AboutSection = () => {
                 <div className="space-y-3">
                   <div className="bg-theme-orange/5 p-3 rounded-lg">
                     <h5 className="font-semibold">B.Tech in Information Technology</h5>
-                    <p className="text-sm text-muted-foreground">Vasireddy Venkatadri Institute of Technology</p>
+                    <p className="text-sm text-muted-foreground">Vasireddy Venkatadri Institute of Technology [2022 - 2026]</p>
                     <p className="text-sm text-theme-orange">CGPA: 8.05 (Till date)</p>
                   </div>
                   
                   <div className="bg-theme-orange/5 p-3 rounded-lg">
                     <h5 className="font-semibold">Intermediate</h5>
-                    <p className="text-sm text-muted-foreground">Narayana Junior College</p>
-                    <p className="text-sm text-theme-orange">Percentage: 89%</p>
+                    <p className="text-sm text-muted-foreground">Narayana Junior College [2020 - 2022]</p>
+                    <p className="text-sm text-theme-orange">Percentage: 89% </p>
                   </div>
                   
                   <div className="bg-theme-orange/5 p-3 rounded-lg">
                     <h5 className="font-semibold">SSC</h5>
-                    <p className="text-sm text-muted-foreground">Sri Chaintanya Techno School</p>
+                    <p className="text-sm text-muted-foreground">Sri Chaintanya Techno School [2019-2020]</p>
                     <p className="text-sm text-theme-orange">Percentage: 97.5%</p>
                   </div>
                 </div>
@@ -112,8 +117,46 @@ const AboutSection = () => {
               <TabsContent value="Certifications" className="space-y-4 pt-4">
                 <div className="space-y-4">
                   <div className="bg-theme-orange/5 p-4 rounded-lg">
+                    <h5 className="font-semibold text-theme-orange"> Cloud Foundations - AWS Academy</h5>
+                    <p className="text-sm font-medium mb-2">AWS Academy Graduate – Issued Sep 2025</p>
+                    <ul className="list-disc pl-5 text-sm text-muted-foreground space-y-1">
+                      <li>This comprehensive training provided a strong understanding of cloud concepts and the core services of the AWS ecosystem.</li>
+                      <li>I learned to identify key AWS services for compute, storage, networking, and databases, such as EC2, S3, and RDS.</li>
+                      <li>The curriculum also covered the fundamentals of AWS security, cloud architecture principles, and cost management.</li>
+                    </ul>
+                    <a
+                      href="https://www.credly.com/badges/e13aa5fc-4635-45f1-a92e-c1ed45b6b248/public_url"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <button className="mt-3 px-4 py-2 rounded bg-theme-orange text-white font-semibold hover:bg-theme-orange/80 transition-colors">
+                        View Certificate
+                      </button>
+                    </a>
+                  </div>
+
+                  <div className="bg-theme-orange/5 p-4 rounded-lg">
+                    <h5 className="font-semibold text-theme-orange"> Cloud Architecting - AWS Academy</h5>
+                    <p className="text-sm font-medium mb-2">AWS Academy Graduate – Issued Sep 2025</p>
+                    <ul className="list-disc pl-5 text-sm text-muted-foreground space-y-1">
+                      <li>This advanced training focused on designing optimal and resilient IT solutions by applying the AWS Well-Architected Framework.</li>
+                      <li>The curriculum covered how to build for high availability, fault tolerance, and scalability using services like Elastic Load Balancing and Auto Scaling.</li>
+                      <li>I gained practical experience in architecting secure, cost-efficient, and high-performing cloud infrastructure to meet specific business requirements.</li>
+                    </ul>
+                    <a
+                      href="https://www.credly.com/badges/43fc9901-1b80-4a18-aeab-827dae4ae5a2/public_url"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <button className="mt-3 px-4 py-2 rounded bg-theme-orange text-white font-semibold hover:bg-theme-orange/80 transition-colors">
+                        View Certificate
+                      </button>
+                    </a>
+                  </div>
+
+                  <div className="bg-theme-orange/5 p-4 rounded-lg">
                     <h5 className="font-semibold text-theme-orange">Associate Google Cloud Engineer</h5>
-                    <p className="text-sm font-medium mb-2">Google Cloud – Issued Jul 2024</p>
+                    <p className="text-sm font-medium mb-2">Google Cloud – Issued Jul 2025</p>
                     <ul className="list-disc pl-5 text-sm text-muted-foreground space-y-1">
                       <li>Demonstrated hands-on ability to deploy, manage, and monitor cloud applications on the Google Cloud Platform.</li>
                       <li>Proficient in configuring cloud solutions, managing storage and network resources, and ensuring security best practices.</li>
